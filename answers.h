@@ -1,1 +1,1 @@
-int xor(int p, int q); 
+int xor_ans(int p, int q);
