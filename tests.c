@@ -2,10 +2,10 @@
 #include "puzzles.h"
 #include <stdio.h>
 
-#define testAnswers 0
-#define testNum 1
+#define testAnswers 1
+#define testNum 2
 
-int test_xor(){
+int xor_test(){
   int passed = 1;
   if (testAnswers){
     passed &= !xor_ans(1,1);
@@ -19,6 +19,23 @@ int test_xor(){
     passed &= xor_puzzle(0,1);
     passed &= !xor_puzzle(0,0);
   }
+  printf("%s\t\t%d\n",__func__, passed);
+  return passed;
+}
+int implication_test(){
+  int passed = 1;
+  if (testAnswers){
+    passed &= implication_ans(1,1);
+    passed &= !implication_ans(1,0);
+    passed &= implication_ans(0,1);
+    passed &= implication_ans(0,0);
+  }
+  else{ 
+    passed &= implication_puzzle(1,1);
+    passed &= !implication_puzzle(1,0);
+    passed &= implication_puzzle(0,1);
+    passed &= implication_puzzle(0,0);
+  }
   printf("%s\t%d\n",__func__, passed);
   return passed;
 }
@@ -26,15 +43,16 @@ int test_xor(){
 typedef int (*f)();
 
 int main(){
-  f func[] = {&test_xor};
+  f func[] = {&xor_test, &implication_test};
 
   int tests_passed = 0;
   int tests_total = 0;
   
-  printf("Function\tScore\n");
+  printf("Function\t\tScore\n----------------------------------\n");
   for (int curr_test = 0; curr_test < testNum; curr_test++){
     tests_passed += func[curr_test]();
     tests_total += 1;
   }
-  printf("Final score: %d%\n", (tests_passed/tests_total*100));
+  printf("----------------------------------\n");
+  printf("Final score: %.0f%%\n", ((double)tests_passed/tests_total)*100);
 }
