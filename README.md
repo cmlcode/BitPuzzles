@@ -21,7 +21,7 @@ To add more tests:
   
 Graded puzzles:  
 * xor
+* implication
   
 Ungraded puzzles:  
-* implication
 * iff

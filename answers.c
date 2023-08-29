@@ -1,7 +1,6 @@
 #include "answers.h"
 
 // Logic Gates
-// Only use &&, ||, and !
 
 /*
  * XOR (^)
@@ -15,7 +14,7 @@
  *  -------------
  */
 int xor_ans(int p, int q){
-  return (p || q) && !(p && q);
+  return (p || q) & !(p && q);
 }
 
 //Discrete Math Problems
@@ -33,7 +32,7 @@ int xor_ans(int p, int q){
  * -----------------
  */
 int implication_ans(int p, int q){
-  return 0;
+  return !p || q;
 }
 
 /*
