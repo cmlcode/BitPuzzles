@@ -1,3 +1,5 @@
+#include "puzzles.h"
+
 // Logic Gates
 // Only use &&, ||, and !
 
@@ -12,7 +14,7 @@
  * | 0 | 0 |  0  |
  *  -------------
  */
-int xor(int p, int q){
+int xor_puzzle(int p, int q){
   return 0;
 }
 
@@ -30,7 +32,7 @@ int xor(int p, int q){
  * | 0 | 0 |   1   |
  * -----------------
  */
-int implication(int p, int q){
+int implication_puzzle(int p, int q){
   return 0;
 }
 
@@ -47,7 +49,7 @@ int implication(int p, int q){
  * | 0 | 0 |    1    |
  *  -----------------
  */
-int iff(int p, int q){
+int iff_puzzle(int p, int q){
   return 0;
 }
 
