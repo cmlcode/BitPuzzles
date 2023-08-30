@@ -1,4 +1,24 @@
 #include "puzzles.h"
+#include <stdio.h>
+
+//Bit Operations
+
+/*
+ * Bit And (&)
+ * Only use these operations: ~ |
+ *  -------------
+ * | p | q | p&q |
+ *  -------------
+ * | 1 | 1 |  1  |
+ * | 1 | 0 |  0  |
+ * | 0 | 1 |  0  |
+ * | 0 | 0 |  0  |
+ *  -------------
+ */
+
+int and_puzzle(int p, int q){
+  return 0;
+}
 
 //Logical Operators
 
@@ -16,7 +36,6 @@ int bang_puzzle(int p){
   return 0;
 }
 
-
 // Logic Gates
 
 /*
@@ -30,10 +49,10 @@ int bang_puzzle(int p){
  * | 0 | 0 |  0  |
  *  -------------
  */
+
 int xor_puzzle(int p, int q){
   return 0;
 }
-
 //Discrete Math Problems
 
 /*
@@ -52,7 +71,6 @@ int implication_puzzle(int p, int q){
   return 0;
 }
 
-
 /*
  * if and only if (<->)
  * For any 2 propositions p and q, the statement "p iff q" is <->
@@ -60,7 +78,7 @@ int implication_puzzle(int p, int q){
  * | p | q | p <-> q |
  *  -----------------
  * | 1 | 1 |    1    |
- * | 1 | 0 |    0    |
+ * | 1 | 0 |    0 
  * | 0 | 1 |    0    |
  * | 0 | 0 |    1    |
  *  -----------------
@@ -68,7 +86,6 @@ int implication_puzzle(int p, int q){
 int iff_puzzle(int p, int q){
   return 0;
 }
-
 
 /*
  * All puzzles after this will begin with citations from where puzzle was found
