@@ -53,7 +53,7 @@ int bang_ans(int p){
 
 int xor_ans(int p, int q){
   return (p | q) & ~(p & q);
-
+}
 //Discrete Math Problems
 
 /*
