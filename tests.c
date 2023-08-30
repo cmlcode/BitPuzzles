@@ -22,6 +22,7 @@ int and_test(){
   printf("%s\t\t%d\n", __func__, passed);
   return passed;
 }
+
 int bang_test(){
   int passed = 1;
   if (testAnswers){
@@ -99,7 +100,7 @@ int iff_test(){
 typedef int (*f)();
 
 int main(){
-  f func[] = {&xor_test, &implication_test, &iff_test, &bang_test, &and_test};
+  f func[] = {&and_test, &bang_test, &xor_test, &implication_test, &iff_test};
 
   int tests_passed = 0;
   int tests_total = 0;
