@@ -22,12 +22,12 @@ int and_test(){
   printf("%s\t\t%d\n", __func__, passed);
   return passed;
 }
-
 int bang_test(){
   int passed = 1;
   if (testAnswers){
     passed &= bang_ans(0);
     passed &= !bang_ans(1);
+    
     passed &= !bang_ans(2);
     passed &= !bang_ans(-1);
   }
@@ -73,6 +73,7 @@ int implication_test(){
     passed &= implication_puzzle(0,1);
     passed &= implication_puzzle(0,0);
   }
+  
   printf("%s\t%d\n", __func__, passed);
   return passed;
 }
