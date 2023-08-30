@@ -1,7 +1,23 @@
 #include "puzzles.h"
 
+//Logical Operators
+
+/*
+ * Bang (!)
+ *  ---------
+ * | p | !p |
+ *  --------
+ * | 0 |  1 |
+ * | 1 |  0 |
+ *  --------
+ */
+
+int bang_puzzle(int p){
+  return 0;
+}
+
+
 // Logic Gates
-// Only use &&, ||, and !
 
 /*
  * XOR (^)

@@ -1,4 +1,41 @@
 #include "answers.h"
+#include <stdio.h>
+
+
+//Bit Operations
+
+/*
+ * Bit And (&)
+ * Only use these operations: ~ |
+ *  -------------
+ * | p | q | p&q |
+ *  -------------
+ * | 1 | 1 |  1  |
+ * | 1 | 0 |  0  |
+ * | 0 | 1 |  0  |
+ * | 0 | 0 |  0  |
+ *  -------------
+ */
+
+int and_ans(int p, int q){
+  return ~(~p | ~q); 
+}
+
+//Logical Operators
+
+/*
+ * Bang (!)
+ *  ---------
+ * | p | !p |
+ *  --------
+ * | 0 |  1 |
+ * | 1 |  0 |
+ *  --------
+ */
+
+int bang_ans(int p){
+  return ((p >> 31) | ((~p + 1) >> 31)) + 1;
+}
 
 // Logic Gates
 
@@ -13,8 +50,9 @@
  * | 0 | 0 |  0  |
  *  -------------
  */
+
 int xor_ans(int p, int q){
-  return (p || q) & !(p && q);
+  return (p | q) & ~(p & q);
 }
 
 //Discrete Math Problems
@@ -32,7 +70,7 @@ int xor_ans(int p, int q){
  * -----------------
  */
 int implication_ans(int p, int q){
-  return !p || q;
+  return (~p & 1) | q;
 }
 
 /*
@@ -43,13 +81,12 @@ int implication_ans(int p, int q){
  *  -----------------
  * | 1 | 1 |    1    |
  * | 1 | 0 |    0 
- * |
  * | 0 | 1 |    0    |
  * | 0 | 0 |    1    |
  *  -----------------
  */
 int iff_ans(int p, int q){
-  return 0;
+  return (p & q) | !(p | q);  
 }
 
 /*

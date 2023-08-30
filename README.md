@@ -17,11 +17,11 @@ To add more tests:
     The function should return 1 if passes everything, 0 otherwise.  
     Print the outcome of the new test in the test function in order to see results.  
 2) Add the functions name to the func array in main().  
-3) Update the testNum definition with the new number of tests.  
+3) Update the testNum definition with the new number of tests.
   
-Graded puzzles:  
-* xor
-* implication
-  
-Ungraded puzzles:  
-* iff
+## Puzzles
+* bitAnd (&)
+* bang (!)
+* xor (^)
+* implication (->)
+* if and only if (<->)
