@@ -1,4 +1,4 @@
-# BitManipulationPuzzles
+# BitPuzzles
 
 ## File Makeup
 answers.* = possible answers to the puzzles  
